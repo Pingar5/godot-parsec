@@ -33,3 +33,6 @@
 
 # Parsec SDK Folder
 sdk/
+
+# Python stuff
+__pycache__/
