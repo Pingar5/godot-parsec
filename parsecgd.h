@@ -67,20 +67,44 @@ public:
 class ParsecGDHostConfig : public Reference {
 	GDCLASS(ParsecGDHostConfig, Reference);
 
-public:
+protected:
+    static void _bind_methods();
 	int gamepad_type;
 	int encoder_fps;
 	int encoder_max_bitrate;
 	int encoder_h265;
 	int max_guests;
-	char name[256];
-	char desc[512];
-	char game_id[72];
-	char secret[32];
+	String name;
+	String desc;
+	String game_id;
+	String secret;
 	bool is_public;
 
+public:
+	ParsecGDHostConfig();
 	ParsecGDHostConfig(ParsecHostConfig cfg);
 	ParsecHostConfig to_sdk_form();
+
+	int get_gamepad_type();
+	void set_gamepad_type(int value);
+	int get_encoder_fps();
+	void set_encoder_fps(int value);
+	int get_encoder_max_bitrate();
+	void set_encoder_max_bitrate(int value);
+	int get_encoder_h265();
+	void set_encoder_h265(int value);
+	int get_max_guests();
+	void set_max_guests(int value);
+	String get_name();
+	void set_name(String value);
+	String get_desc();
+	void set_desc(String value);
+	String get_game_id();
+	void set_game_id(String value);
+	String get_secret();
+	void set_secret(String value);
+	bool get_is_public();
+	void set_is_public(bool value);
 };
 
 #endif //PARSECGD_H
