@@ -80,6 +80,7 @@ public:
 	bool is_public;
 
 	ParsecGDHostConfig(ParsecHostConfig cfg);
+	ParsecHostConfig to_sdk_form();
 };
 
 #endif //PARSECGD_H
