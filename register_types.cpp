@@ -5,6 +5,7 @@
 
 void register_parsec_types() {
     ClassDB::register_class<ParsecGD>();
+    ClassDB::register_class<ParsecGDHostConfig>();
 }
 
 void unregister_parsec_types() {
